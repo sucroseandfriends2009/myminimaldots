@@ -1,0 +1,79 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 20, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 2, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/workspaces",
+        "custom/activewindow"
+    ],
+    "modules-center": [
+        
+    ],
+    "modules-right": [
+        "custom/music",
+        "custom/cpu",
+        "custom/ram",
+        "custom/storage",
+        "custom/clock",
+        "custom/date"
+    ],
+
+
+"custom/workspaces": {
+    "exec": "~/.config/waybar/workspaces.sh",
+    "interval": 0,
+    "format": "{}",
+    "markup": "none"
+}
+,
+  
+
+"custom/activewindow": {
+    "exec": "~/.config/waybar/activewindow.sh",
+    "interval": 0  // no extra polling, script handles it
+},
+ 
+"custom/date": {
+    "exec": "date +' %d %B %Y - %A'",
+    "interval": 60,
+    "tooltip": false
+  },
+
+  "custom/clock": {
+    "exec": "date +'%H:%M'",
+    "interval": 1,
+    "tooltip": false
+  },
+
+  "custom/cpu": {
+    "exec": "~/.config/waybar/scripts/cpu.sh",
+    "interval": 2,
+    "tooltip": false
+  },
+
+  "custom/ram": {
+    "exec": "~/.config/waybar/scripts/ram.sh",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "custom/storage": {
+    "exec": "~/.config/waybar/scripts/storage.sh",
+    "interval": 30,
+    "tooltip": false
+  },
+
+"custom/music": {
+    "exec": "~/.config/waybar/scripts/music_all.sh",
+    "interval": 0,
+    "format": "{}",
+    "markup": "none"
+}
+
+    
+    
+}

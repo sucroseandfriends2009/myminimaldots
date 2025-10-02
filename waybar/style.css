@@ -1,0 +1,148 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "ProFontWindows Nerd Font", sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgb(12, 12, 12);
+    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+
+#custom-workspaces {
+    padding-left: 15px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+
+#custom-activewindow {
+  font-size: 14px;
+  font-family: monospace;
+  color: #fff;
+  padding: 0 10px;
+}
+
+
+
+
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+
+
+label:focus {
+    background-color: #000000;
+}
+
+/* Add padding from the left corner */
+#custom-date {
+  padding-left: 5px;   /* move date away from bar edge */
+  margin-right: 15px;   /* space between date and clock */
+}
+
+#custom-clock {
+  padding-right: 0px;  /* optional: move clock away from edge if it's last */
+}
+#custom-cpu {
+    padding-left: 5px;   /* space from left edge */
+    margin-right: 15px;    /* space to next module */
+}
+
+#custom-ram {
+    margin-right: 10px;    /* space to next module */
+}
+
+#custom-storage {
+    padding-right: 10px;   /* optional space from right edge */
+}
+/* Spotify / music module padding */
+#custom-music {
+    padding-left: 5px;   /* distance from left edge */
+    padding-right: 5px;  /* optional: distance from other modules */
+}
+
+

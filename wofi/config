@@ -1,0 +1,13 @@
+# Wofi config file
+
+# Window geometry
+width=600
+height=400
+location=center
+
+# Default mode
+show=drun
+term=kitty
+
+# Extra
+hide_scroll=true
